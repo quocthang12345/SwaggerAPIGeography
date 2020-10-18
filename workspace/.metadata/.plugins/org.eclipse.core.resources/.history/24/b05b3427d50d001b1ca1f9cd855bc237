@@ -1,0 +1,38 @@
+package com.Example.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.MongoDbFactory;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import com.mongodb.MongoClient;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan({"com.Example"})
+public class WebAppConfig extends WebMvcConfigurerAdapter {
+
+    @Override 
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+    
+    @Bean
+    public MongoDbFactory mongoDbFactory() {
+		return new SimpleMongoDbFactory(new MongoClient("localhost", 27017), "example");
+
+    }
+    
+    @Bean
+    public MongoTemplate mongoTemplate() {
+		return new MongoTemplate(mongoDbFactory());
+    	
+    }
+
+}

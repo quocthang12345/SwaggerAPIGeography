@@ -1,0 +1,37 @@
+package com.Example.config;
+
+import java.util.Collection;
+import java.util.Collections;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
+
+import com.mongodb.ConnectionString;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientSettings;
+
+@Configuration
+public class MongoConfig extends AbstractMongoClientConfiguration {
+ 
+
+
+	@Override
+    protected String getDatabaseName() {
+        return "example";
+    }
+ 
+    @Override
+    public MongoClient mongoClient() {
+        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/example");
+        MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
+            .applyConnectionString(connectionString)
+            .build();
+        
+        return MongoClients.create(mongoClientSettings);
+    }
+ 
+    @Override
+    public Collection getMappingBasePackages() {
+        return Collections.singleton("com.Example");
+    }
+}

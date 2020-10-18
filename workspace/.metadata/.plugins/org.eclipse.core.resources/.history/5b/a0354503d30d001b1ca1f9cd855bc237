@@ -1,0 +1,5 @@
+package com.Example.dao;
+
+public class ITypeDAO {
+
+}

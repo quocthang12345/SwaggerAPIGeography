@@ -1,0 +1,5 @@
+package com.Example.repository;
+
+public interface TypeRepository {
+
+}

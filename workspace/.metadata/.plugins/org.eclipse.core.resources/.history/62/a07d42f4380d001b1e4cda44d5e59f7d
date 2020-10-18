@@ -1,0 +1,5 @@
+package com.Example.service;
+
+public interface ITypeService {
+
+}

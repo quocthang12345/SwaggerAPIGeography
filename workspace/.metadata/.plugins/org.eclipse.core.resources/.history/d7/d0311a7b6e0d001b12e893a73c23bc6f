@@ -1,0 +1,8 @@
+package com.Example.service;
+
+import com.Example.model.Type;
+
+public interface ITypeService {
+	Type FindType(Long id);
+	Type InsertType(Type type);
+}

@@ -1,0 +1,7 @@
+package com.Example.service.impl;
+
+import com.Example.service.ITypeService;
+
+public class TypeService implements ITypeService {
+
+}

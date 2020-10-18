@@ -1,0 +1,29 @@
+package com.Example.converter;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.Example.model.Type;
+import com.Example.model.TypeDTO;
+import com.Example.service.ITypeService;
+
+@Component
+public class TypeConvert {
+	
+	@Autowired
+	private ITypeService typeService;
+	
+	public Type toEntity(TypeDTO type) {
+		Type newType = new Type();
+		newType.setAddress(type.getAddress());
+		newType.setDescription(type.getDescription());
+		newType.setName(type.getName());
+		newType.setPhone(type.getPhone());
+		newType.setSource(type.getSource());
+		newType.setWebsite(type.getWebsite());
+		newType.setLocation(typeService.findLocation(type).get(0));
+		newType.setGeometry(typeService.findGeometry(type).get(0));
+		return newType;
+	}
+
+}

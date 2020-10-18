@@ -1,0 +1,11 @@
+package com.Example.service;
+
+import java.util.List;
+
+import com.Example.model.Type;
+
+
+public interface ITypeService {
+	List<Type> findAll();
+	void Insert(Type type);
+}

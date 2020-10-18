@@ -1,0 +1,32 @@
+package com.Example.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.Example.model.Type;
+import com.Example.service.ITypeService;
+
+@Service
+public class TypeService implements ITypeService {
+
+	private List<Type> typeList = new ArrayList<Type>();
+	
+	@Override
+	public List<Type> FindType() {
+		List<Type> result = new ArrayList<>();
+		for(Type type : typeList) {
+			result.add(type);
+		}
+		return result;
+		
+	}
+
+	@Override
+	public Type InsertType(Type type) {
+		typeList.add(type);
+		return type;
+	}
+	
+}

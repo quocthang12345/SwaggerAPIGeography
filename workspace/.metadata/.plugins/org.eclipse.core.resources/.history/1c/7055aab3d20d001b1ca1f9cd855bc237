@@ -1,0 +1,30 @@
+package com.Example.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+@JsonIdentityInfo(
+		  generator = ObjectIdGenerators.PropertyGenerator.class,
+		  property = "id")
+public class Geometry {
+	private String typePolygons;
+	private List<String> coordinatesPoint = new ArrayList<>();
+	public String getTypePolygons() {
+		return typePolygons;
+	}
+	public void setTypePolygons(String typePolygons) {
+		this.typePolygons = typePolygons;
+	}
+	public List<String> getCoordinatesPoint() {
+		return coordinatesPoint;
+	}
+	public void setCoordinatesPoint(List<String> coordinatesPoint) {
+		this.coordinatesPoint = coordinatesPoint;
+	}
+	
+	
+
+}

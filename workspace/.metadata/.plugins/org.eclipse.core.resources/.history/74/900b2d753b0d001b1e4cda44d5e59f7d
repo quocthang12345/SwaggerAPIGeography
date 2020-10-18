@@ -1,0 +1,24 @@
+package com.Example.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.Example.model.Type;
+import com.Example.service.ITypeService;
+
+public class TypeService implements ITypeService {
+
+	@Override
+	public Type FindType(Long id) {
+		List<Type> typeList = new ArrayList<Type>();
+		Type typeFinded = new Type();
+		for(Type type : typeList) {
+			if(type.getId() == id) {
+				typeFinded = type;
+			}
+		}
+		return typeFinded;
+		
+	}
+	
+}
