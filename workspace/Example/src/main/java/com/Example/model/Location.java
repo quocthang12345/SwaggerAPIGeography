@@ -5,26 +5,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 
 public class Location {
+	@ApiModelProperty(dataType = "string",value = "longitude")
+	@JsonProperty("lng")
+	private Double lng;
 	
-	@ApiModelProperty(dataType="Postion", value="position")
-	@JsonProperty("position")
-	private Position position;
+	@ApiModelProperty(dataType = "string",value = "latitude")
+	@JsonProperty("lat")
+	private Double lat;
 
-	public Position getPosition() {
-		return position;
+	public Double getLng() {
+		return lng;
 	}
 
-	public void setPosition(Position position) {
-		this.position = position;
+	public void setLng(Double lng) {
+		this.lng = lng;
+	}
+
+	public Double getLat() {
+		return lat;
+	}
+
+	public void setLat(Double lat) {
+		this.lat = lat;
 	}
 	
 	@Override
 	public String toString() {
-		String rs = "position: {\n " + this.position.toString() + "\t\t}"; 
+		String rs = "\t\tlat: " + this.lat + ",\n" + "\t\tlng: " + this.lng;
 		return rs;
 	}
-	
 }
-
-
-

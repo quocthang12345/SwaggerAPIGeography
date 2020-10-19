@@ -1,0 +1,6 @@
+
+thg 10 19, 2020 08:31:50.41 NEW SESSION
+thg 10 19, 2020 08:31:50.42 [1664:5280:1019/083150.417:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+thg 10 19, 2020 08:32:06.95 [1664:12484:1019/083206.950:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 2
+thg 10 19, 2020 08:40:30.43 [1664:5280:1019/084030.430:ERROR:socket_stream.cc(219)] Closing stream with result -2
+thg 10 19, 2020 08:41:26.45 [1019/084126.449:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

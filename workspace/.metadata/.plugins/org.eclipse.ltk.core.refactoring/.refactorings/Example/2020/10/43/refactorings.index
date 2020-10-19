@@ -1,1 +1,12 @@
 1603034745213	Rename type 'Postion'
+1603070984530	Delete element
+1603072230192	Rename type 'Type'
+1603072244060	Rename type 'TypeDTO'
+1603072251479	Rename type 'placeDTO'
+1603072354056	Rename type 'ITypeDAO'
+1603072362620	Rename type 'TypeDAO'
+1603072384441	Rename type 'ITypeService'
+1603072395749	Rename type 'TypeService'
+1603072403729	Delete element
+1603072417483	Rename compilation unit 'TypeRepository.java'
+1603072429521	Rename type 'TypeConvert'
