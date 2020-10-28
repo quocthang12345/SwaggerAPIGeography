@@ -1,5 +1,0 @@
-package com.Example.dao;
-
-public interface ITypeDAO {
-	List<Type> findAll();
-}

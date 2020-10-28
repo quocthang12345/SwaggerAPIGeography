@@ -1,6 +1,92 @@
 
-thg 10 19, 2020 08:31:50.41 NEW SESSION
-thg 10 19, 2020 08:31:50.42 [1664:5280:1019/083150.417:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
-thg 10 19, 2020 08:32:06.95 [1664:12484:1019/083206.950:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 2
-thg 10 19, 2020 08:40:30.43 [1664:5280:1019/084030.430:ERROR:socket_stream.cc(219)] Closing stream with result -2
-thg 10 19, 2020 08:41:26.45 [1019/084126.449:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Oct 23, 2020 14:38:49.206 NEW SESSION
+Oct 23, 2020 14:38:49.206 [3245, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 14:38:49.207 [3245, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 14:38:49.208 ExceptionHandler::GenerateDump cloned child 3787
+Oct 23, 2020 14:38:49.209 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 14:38:49.209 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 23, 2020 14:39:04.956 Failed to open curl lib from binary, use libcurl.so instead
+
+Oct 23, 2020 14:45:18.506 NEW SESSION
+Oct 23, 2020 14:45:18.506 [5784, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 14:45:18.506 [5784, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 14:45:18.507 ExceptionHandler::GenerateDump cloned child 5978
+Oct 23, 2020 14:45:18.507 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 14:45:18.507 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+Oct 23, 2020 15:03:06.760 NEW SESSION
+Oct 23, 2020 15:03:06.761 [9420, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:03:06.762 [9420, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:03:06.762 ExceptionHandler::GenerateDump cloned child 9677
+Oct 23, 2020 15:03:06.762 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 15:03:06.762 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 23, 2020 15:03:09.17 Failed to open curl lib from binary, use libcurl.so instead
+Oct 23, 2020 15:44:17.154 [14647, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:44:17.155 [14647, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:44:17.157 ExceptionHandler::GenerateDump cloned child 14935
+Oct 23, 2020 15:44:17.157 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 15:44:17.157 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 23, 2020 15:44:53.792 
+Oct 23, 2020 15:44:53.793 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+Oct 23, 2020 15:44:53.794 
+Oct 23, 2020 15:44:54.968 Failed to open curl lib from binary, use libcurl.so instead
+Oct 23, 2020 15:46:14.746 [15462, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:46:14.746 [15462, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:46:14.747 ExceptionHandler::GenerateDump cloned child 15756
+Oct 23, 2020 15:46:14.747 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 15:46:14.747 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 23, 2020 15:46:43.814 Failed to open curl lib from binary, use libcurl.so instead
+
+Oct 23, 2020 15:51:46.902 NEW SESSION
+Oct 23, 2020 15:51:46.902 [2767, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:51:46.903 [2767, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 15:51:46.903 ExceptionHandler::GenerateDump cloned child 3479
+Oct 23, 2020 15:51:46.903 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 15:51:46.903 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 23, 2020 16:13:19.649 [6404, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 16:13:19.650 [6404, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 16:13:19.650 ExceptionHandler::GenerateDump cloned child 6742
+Oct 23, 2020 16:13:19.651 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 16:13:19.651 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 23, 2020 17:23:17.979 [16117, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 17:23:17.979 [16117, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 23, 2020 17:23:17.981 ExceptionHandler::GenerateDump cloned child 16396
+Oct 23, 2020 17:23:17.981 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 23, 2020 17:23:17.981 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+Oct 26, 2020 11:47:01.826 NEW SESSION
+Oct 26, 2020 11:47:01.826 [3988, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 26, 2020 11:47:01.827 [3988, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 26, 2020 11:47:01.827 ExceptionHandler::GenerateDump cloned child 4161
+Oct 26, 2020 11:47:01.827 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 26, 2020 11:47:01.827 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+Oct 26, 2020 16:40:45.07 NEW SESSION
+Oct 26, 2020 16:40:45.08 [3172, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 26, 2020 16:40:45.08 [3172, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 26, 2020 16:40:45.09 ExceptionHandler::GenerateDump cloned child 3455
+Oct 26, 2020 16:40:45.09 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 26, 2020 16:40:45.09 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 26, 2020 16:40:55.959 Failed to open curl lib from binary, use libcurl.so instead
+
+Oct 27, 2020 24:42:58.635 NEW SESSION
+Oct 27, 2020 24:42:58.635 [5128, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 27, 2020 24:42:58.636 [5128, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 27, 2020 24:42:58.636 ExceptionHandler::GenerateDump cloned child 5398
+Oct 27, 2020 24:42:58.637 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 27, 2020 24:42:58.637 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+Oct 27, 2020 24:43:08.401 Failed to open curl lib from binary, use libcurl.so instead
+
+Oct 27, 2020 16:30:28.268 NEW SESSION
+Oct 27, 2020 16:30:28.268 [3230, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 27, 2020 16:30:28.269 [3230, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 27, 2020 16:30:28.269 ExceptionHandler::GenerateDump cloned child 3415
+Oct 27, 2020 16:30:28.269 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 27, 2020 16:30:28.269 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+Oct 28, 2020 23:27:52.441 NEW SESSION
+Oct 28, 2020 23:27:52.441 [17594, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 28, 2020 23:27:52.442 [17594, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Oct 28, 2020 23:27:52.442 ExceptionHandler::GenerateDump cloned child 17690
+Oct 28, 2020 23:27:52.443 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Oct 28, 2020 23:27:52.443 ExceptionHandler::WaitForContinueSignal waiting for continue signal...

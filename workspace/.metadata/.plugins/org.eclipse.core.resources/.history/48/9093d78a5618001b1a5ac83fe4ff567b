@@ -1,0 +1,5 @@
+package com.Map.config;
+
+public class SecurityConfig {
+
+}

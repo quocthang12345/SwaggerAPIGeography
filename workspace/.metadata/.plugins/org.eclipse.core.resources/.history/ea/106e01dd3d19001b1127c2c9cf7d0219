@@ -1,0 +1,79 @@
+package com.Map.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Map.convert.ModelConvert;
+import com.Map.model.Model;
+import com.Map.model.ModelDTO;
+import com.Map.service.IModelService;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+import io.swagger.annotations.Authorization;
+import io.swagger.annotations.AuthorizationScope;
+
+@RestController
+@Api(tags = "This page CRUD Model")
+public class APIController {
+
+	
+		@Autowired 
+		private IModelService modelService;
+		  
+		@Autowired 
+		private ModelConvert modelConverter;
+		
+		@ApiResponses(value = { @ApiResponse(code = 300, message = "This is Error Page 300", response = Class.class),
+				@ApiResponse(code = 500, message = "This is Error Page 500", response = Class.class) })
+		
+		@GetMapping(value = "/edit/get")
+		public String getPage() {
+			return modelService.findAll().toString();
+		}
+		
+		@GetMapping(value = "/edit/paging")
+		public String pagingPage(@RequestParam(value = "start") int start,@RequestParam(value = "limit") int limit) {
+			return modelService.findByStartAndLimit(start, limit).toString();
+		}
+		
+		@ApiOperation(value = "add Token" , authorizations = @Authorization(value = "view_admin"))
+		@PostMapping(value = "/edit/insert", consumes = MediaType.APPLICATION_JSON_VALUE)
+		public HttpStatus addPage(@ApiParam(value = "Model",required = true) @RequestBody ModelDTO model) {
+			Model modelEntity = modelConverter.toEntity(model);
+			modelService.Insert(modelEntity);
+			return HttpStatus.OK;
+		}
+
+		@PutMapping(value = "/edit/update", consumes = MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public HttpStatus editPage(@RequestBody ModelDTO model) {
+			Model modelEntity = modelConverter.toEntity(model); 
+		    modelService.Update(modelEntity);
+			return HttpStatus.OK;
+		}
+		
+		@ApiOperation(value = "add Token" , authorizations = @Authorization(value = "view_admin"))
+		@DeleteMapping(value = "/edit/delete", consumes = MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public HttpStatus deletePage(@RequestBody String id) {
+	          modelService.Delete(id.replace("\"", ""));       
+	          return HttpStatus.OK;
+		}
+
+}

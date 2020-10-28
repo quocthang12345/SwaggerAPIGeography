@@ -1,0 +1,104 @@
+package com.Map.config;
+
+import java.util.Arrays;
+import java.util.ResourceBundle;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.OAuthBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.AuthorizationScope;
+import springfox.documentation.service.ClientCredentialsGrant;
+import springfox.documentation.service.GrantType;
+import springfox.documentation.service.SecurityReference;
+import springfox.documentation.service.SecurityScheme;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.service.contexts.SecurityContext;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger.web.SecurityConfiguration;
+import springfox.documentation.swagger.web.SecurityConfigurationBuilder;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@Configuration
+@EnableSwagger2
+public class Swagger2Config {
+	
+	ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+	
+	 private final String AUTH_SERVER = resourceBundle.getString("keycloak.auth-server-url");
+
+	 private final String CLIENT_SECRET = resourceBundle.getString("keycloak.credentials.secret");
+
+	 private final String CLIENT_ID = resourceBundle.getString("keycloak.resource");
+
+	 private final String REALM = resourceBundle.getString("keycloak.realm");
+	
+	 private static final String OAUTH_NAME = "spring_oauth";
+	 
+	 	@Bean
+	    public Docket api(){
+	        return new Docket(DocumentationType.SWAGGER_2)
+	            .select()
+	            .apis(RequestHandlerSelectors.any())
+	            .paths(PathSelectors.regex("/edit.*"))
+	            .build()
+	            .apiInfo(apiInfo())
+	      
+	        	.securitySchemes(Arrays.asList(securityScheme()))
+		        .securityContexts(Arrays.asList(securityContext()));
+	    }
+	 
+	 
+
+	    private ApiInfo apiInfo() {
+	        return new ApiInfoBuilder()
+	            .title("Handling Data")
+	            .description("DESCRIPTION")
+	            .version("VERSION")
+	            .termsOfServiceUrl("http://terms-of-services.url")
+	            .license("LICENSE")
+	            .licenseUrl("http://url-to-license.com")
+	            .build();
+	    }
+	    
+	    
+	    
+	    @Bean
+	    public SecurityConfiguration security() {
+	    	
+	      return SecurityConfigurationBuilder.builder()
+	       .realm(REALM)
+	       .clientId(CLIENT_ID)
+	       .clientSecret(CLIENT_SECRET)
+	       .useBasicAuthenticationWithAccessCodeGrant(true)
+	       .scopeSeparator(" ")
+	       .build();
+	    }
+
+	    private SecurityScheme securityScheme() {
+	    	
+	    	GrantType grantType = new ClientCredentialsGrant(AUTH_SERVER + "/realms/Map/protocol/openid-connect/token");
+
+	      SecurityScheme oauth = new OAuthBuilder()
+	           						.name(OAUTH_NAME)
+	           						.grantTypes(Arrays.asList(grantType))
+	           						.scopes(Arrays.asList(new AuthorizationScope[]{}))
+	           						.build();
+	   		return oauth;
+	    }
+	    
+	    
+
+
+	   private SecurityContext securityContext() {
+		   
+		   return SecurityContext.builder()
+		       .securityReferences(Arrays.asList(new SecurityReference(OAUTH_NAME, new AuthorizationScope[]{})))
+		       .forPaths(PathSelectors.regex("/edit.*"))
+		       .build();
+	    }
+}

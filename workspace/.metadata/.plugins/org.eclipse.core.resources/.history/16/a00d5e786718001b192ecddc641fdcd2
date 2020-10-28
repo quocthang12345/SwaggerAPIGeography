@@ -1,0 +1,201 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.Map</groupId>
+  <artifactId>Map</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  
+  <properties>
+		<jsp.api.version>2.3.1</jsp.api.version>
+	   	<jstl.version>1.2</jstl.version>
+	   	<servlet.api.version>3.1.0</servlet.api.version>
+	   	<springframework.version>4.3.5.RELEASE</springframework.version>
+	   	<springsecurity.version>4.2.3.RELEASE</springsecurity.version>
+ </properties>
+ 
+ <dependencies>
+	  	<!-- servlet api -->
+	   <dependency>
+		      <groupId>javax.servlet</groupId>
+		      <artifactId>javax.servlet-api</artifactId>
+		      <version>${servlet.api.version}</version>
+	   </dependency>
+	
+	   <!-- jsp api -->
+	  	<dependency>
+		      <groupId>javax.servlet.jsp</groupId>
+		      <artifactId>javax.servlet.jsp-api</artifactId>
+		      <version>${jsp.api.version}</version>
+	  	</dependency>
+	   
+	    <!-- jstl -->
+	   	<dependency>
+		      <groupId>javax.servlet</groupId>
+		      <artifactId>jstl</artifactId>
+		      <version>${jstl.version}</version>
+	   	</dependency>
+	   	
+	   	<!-- Spring -->
+		   <dependency>
+		      <groupId>org.springframework</groupId>
+		      <artifactId>spring-core</artifactId>
+		      <version>${springframework.version}</version>
+		   </dependency>
+		   <dependency>
+		      <groupId>org.springframework</groupId>
+		      <artifactId>spring-web</artifactId>
+		      <version>${springframework.version}</version>
+		   </dependency>
+		   <dependency>
+		      <groupId>org.springframework</groupId>
+		      <artifactId>spring-webmvc</artifactId>
+		      <version>${springframework.version}</version>
+		   </dependency>
+		   <dependency>
+		      <groupId>org.springframework</groupId>
+		      <artifactId>spring-tx</artifactId>
+		      <version>${springframework.version}</version>
+		   </dependency>
+		   <dependency>
+		      <groupId>org.springframework</groupId>
+		      <artifactId>spring-orm</artifactId>
+		      <version>${springframework.version}</version>
+		   </dependency>
+		   <dependency>
+		      <groupId>org.springframework</groupId>
+		      <artifactId>spring-context</artifactId>
+		      <version>${springframework.version}</version>
+		   </dependency>
+		   <dependency>
+		      <groupId>org.springframework</groupId>
+		      <artifactId>spring-context-support</artifactId>
+		      <version>${springframework.version}</version>
+		   </dependency> 
+		   
+		   
+		   <!--Spring data mongo  -->
+		   <dependency>
+			    <groupId>org.springframework.data</groupId>
+			    <artifactId>spring-data-mongodb</artifactId>
+			    <version>1.9.5.RELEASE</version>
+			</dependency> 
+			<!-- <dependency>
+			    <groupId>org.springframework.data</groupId>
+			    <artifactId>spring-data-mongodb</artifactId>
+			    <version>3.0.3.RELEASE</version>
+			</dependency> -->
+			<!-- <dependency>
+			    <groupId>org.mongodb</groupId>
+			    <artifactId>mongo-java-driver</artifactId>
+			    <version>2.12.3</version>
+			</dependency>  -->
+			<dependency>
+			    <groupId>org.mongodb</groupId>
+			    <artifactId>mongo-java-driver</artifactId>
+			    <version>3.0.0</version>
+			</dependency> 
+						
+			
+			<!-- json -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>2.6.7</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>2.6.7</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>2.6.7</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>1.9.13</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-core-asl</artifactId>
+				<version>1.9.13</version>
+			</dependency>
+			<!--end json -->
+			
+			
+			<!-- Swagger2 -->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>2.9.2</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>2.9.2</version>
+			</dependency>
+			
+			<!-- keycloak -->
+			<!-- <dependency>
+		        <groupId>org.keycloak</groupId>
+		        <artifactId>keycloak-spring-security-adapter</artifactId>
+		        <version>3.4.3.Final</version>
+		    </dependency> -->
+		   <dependency>
+		        <groupId>org.keycloak</groupId>
+		        <artifactId>keycloak-spring-boot-starter</artifactId>
+		    </dependency>
+		    
+		    <!-- spring security -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${springsecurity.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${springsecurity.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-acl</artifactId>
+				<version>${springsecurity.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.springframework.security</groupId>
+			    <artifactId>spring-security-core</artifactId>
+			    <version>${springsecurity.version}</version>
+			</dependency>
+	</dependencies>
+	<dependencyManagement>
+	   <dependencies>
+	      <dependency>
+	         <groupId>org.keycloak.bom</groupId>
+	         <artifactId>keycloak-adapter-bom</artifactId>
+	         <version>7.0.0</version>
+	         <type>pom</type>
+	         <scope>import</scope>
+	      </dependency>
+	   </dependencies>
+	</dependencyManagement>
+		   
+	<build>
+	   <plugins>
+	     <plugin>
+	         <groupId>org.apache.maven.plugins</groupId>
+	         <artifactId>maven-compiler-plugin</artifactId>
+	         <version>3.6.1</version>
+	         
+	         <configuration>
+	            <source>1.8</source>
+	            <target>1.8</target>
+	         </configuration>
+	      </plugin> 
+	   </plugins>
+	</build>
+  
+</project>

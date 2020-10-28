@@ -1,5 +1,0 @@
-package com.Example.service;
-
-public interface ITypeService {
-	Type FindType(Long id);
-}

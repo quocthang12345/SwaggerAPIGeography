@@ -1,9 +1,0 @@
-package com.Example.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.Example.model.Type;
-
-public interface TypeRepository extends JpaRepository<Type, Long> {
-
-}
