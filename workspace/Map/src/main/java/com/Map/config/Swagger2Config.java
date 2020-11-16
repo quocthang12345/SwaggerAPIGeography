@@ -1,7 +1,6 @@
 package com.Map.config;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import org.springframework.context.annotation.Bean;
@@ -28,7 +27,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class Swagger2Config {
+public class Swagger2Config  {
+	
+	
 
 	ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
@@ -46,7 +47,7 @@ public class Swagger2Config {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.regex("/edit.*")).build().apiInfo(apiInfo())
+				.paths(PathSelectors.any()).build().apiInfo(apiInfo())
 				.securitySchemes(Arrays.asList(securityScheme())).securityContexts(Arrays.asList(securityContext()));
 	}
 
@@ -79,29 +80,16 @@ public class Swagger2Config {
 		SecurityScheme oauth = new OAuthBuilder()
 				.name(OAUTH_NAME)
 				.grantTypes(Arrays.asList(grantType))
-				.scopes(Arrays.asList(scopes()))
 				.build();
 		return oauth;
 	}
 
-	/*
-	 * private List<SecurityReference> defaultAuth() { AuthorizationScope
-	 * authorizationScope = new AuthorizationScope("global", "accessEverything");
-	 * AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
-	 * authorizationScopes[0] = authorizationScope; return Arrays.asList(new
-	 * SecurityReference("apiKey", authorizationScopes)); }
-	 */
 
-	
-	private AuthorizationScope[] scopes() {
-		AuthorizationScope[] scopes = { new AuthorizationScope("view_admin", "for CRUD operations"),
-				new AuthorizationScope("view_user", "for read operations") };
-		return scopes;
-	}
+
 	 
 
 	private SecurityContext securityContext() {
-		return SecurityContext.builder().securityReferences(Arrays.asList(new SecurityReference(OAUTH_NAME, scopes()))).forPaths(PathSelectors.regex("/edit/.*"))
+		return SecurityContext.builder().securityReferences(Arrays.asList(new SecurityReference(OAUTH_NAME, new AuthorizationScope[] {}))).forPaths(PathSelectors.any())
 				.build();
 	}
 }

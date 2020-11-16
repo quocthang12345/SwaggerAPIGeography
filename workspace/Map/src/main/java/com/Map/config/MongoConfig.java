@@ -27,6 +27,7 @@ import com.mongodb.ServerAddress;
 @Configuration
 @EnableMongoRepositories(basePackages = "com.Map.repository")
 public class MongoConfig {
+	
 
 	@Bean
 	public MongoDbFactory mongoDbFactory() throws Exception {

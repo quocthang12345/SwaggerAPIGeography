@@ -90,3 +90,127 @@ Oct 28, 2020 23:27:52.442 [17594, Main Thread] ###!!! ABORT: file resource://gre
 Oct 28, 2020 23:27:52.442 ExceptionHandler::GenerateDump cloned child 17690
 Oct 28, 2020 23:27:52.443 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
 Oct 28, 2020 23:27:52.443 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+Nov 10, 2020 14:45:20.709 NEW SESSION
+Nov 10, 2020 14:45:20.709 _IceTransSocketUNIXConnect: Cannot connect to non-local host quoc-thang-ASUS-Laptop-X507UF
+Nov 10, 2020 14:45:20.710 _IceTransSocketUNIXConnect: Cannot connect to non-local host quoc-thang-ASUS-Laptop-X507UF
+Nov 10, 2020 14:45:20.897 _IceTransSocketUNIXConnect: Cannot connect to non-local host quoc-thang-ASUS-Laptop-X507UF
+Nov 10, 2020 14:45:20.900 _IceTransSocketUNIXConnect: Cannot connect to non-local host quoc-thang-ASUS-Laptop-X507UF
+
+Nov 10, 2020 16:48:32.711 NEW SESSION
+Nov 10, 2020 16:48:32.711 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+Nov 10, 2020 16:48:32.721 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+Nov 10, 2020 16:48:32.958 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+Nov 10, 2020 16:48:32.972 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+Nov 10, 2020 17:00:07.919 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+Nov 10, 2020 17:00:07.947 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+Nov 10, 2020 17:00:08.156 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+Nov 10, 2020 17:00:08.178 _IceTransSocketUNIXConnect: Cannot connect to non-local host accounts-dev.map4d.vn
+
+Nov 10, 2020 23:33:02.872 NEW SESSION
+Nov 10, 2020 23:33:02.872 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:33:02.887 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:33:03.146 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:33:03.165 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+
+Nov 10, 2020 23:56:00.173 NEW SESSION
+Nov 10, 2020 23:56:00.174 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:56:00.210 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:56:00.497 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:56:00.510 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:57:54.462 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:57:54.475 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:57:54.814 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 10, 2020 23:57:54.829 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:00:43.303 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:00:43.321 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:00:43.617 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:00:43.631 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:02:42.61 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:02:42.76 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:02:42.364 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:02:42.403 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:04:07.905 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:04:07.921 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:04:08.152 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:04:08.165 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:42:07.724 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:42:07.739 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:42:07.930 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:42:07.945 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:45:14.432 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:45:14.449 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:45:14.912 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:45:14.929 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+
+Nov 11, 2020 24:49:42.404 NEW SESSION
+Nov 11, 2020 24:49:42.404 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:49:42.420 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:49:42.700 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:49:42.712 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:55:07.784 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:55:07.797 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:55:08.212 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:55:08.224 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:56:43.807 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:56:43.819 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:56:44.86 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:56:44.104 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:59:14.448 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:59:14.461 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:59:14.745 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 24:59:14.760 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:00:20.171 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:00:20.182 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:00:20.868 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:00:20.882 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:12:06.787 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:12:06.801 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:12:07.55 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:12:07.67 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:13:27.604 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:13:27.617 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:13:27.852 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:13:27.865 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:16:27.559 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:16:27.567 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:16:28.379 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:16:28.392 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:17:52.295 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:17:52.309 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:17:52.743 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:17:52.760 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:18:50.142 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:18:50.153 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:18:50.868 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:18:50.878 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:20:35.172 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:20:35.183 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:20:35.531 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:20:35.546 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:23:02.799 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:23:02.823 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:23:09.55 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:23:09.99 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:24:19.613 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:24:19.628 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:24:19.940 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:24:19.955 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:38:01.878 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:38:01.894 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:38:02.125 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+Nov 11, 2020 01:38:02.140 _IceTransSocketUNIXConnect: Cannot connect to non-local host httpaccounts-dev.map4d.vn
+
+Nov 11, 2020 16:24:41.57 NEW SESSION
+Nov 11, 2020 16:24:41.58 [10993, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Nov 11, 2020 16:24:41.58 [10993, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Nov 11, 2020 16:24:41.70 ExceptionHandler::GenerateDump cloned child 11356
+Nov 11, 2020 16:24:41.70 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Nov 11, 2020 16:24:41.82 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+Nov 12, 2020 15:33:24.764 NEW SESSION
+Nov 12, 2020 15:33:24.764 [7041, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Nov 12, 2020 15:33:24.765 [7041, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Nov 12, 2020 15:33:24.765 ExceptionHandler::GenerateDump cloned child 7391
+Nov 12, 2020 15:33:24.765 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Nov 12, 2020 15:33:24.766 ExceptionHandler::WaitForContinueSignal waiting for continue signal...

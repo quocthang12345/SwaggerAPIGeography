@@ -1,0 +1,21 @@
+ {
+ 	"confidential-port": 8280,
+	"realm": "Map",
+	"auth-server-url": "http://accounts-dev.map4d.vn/auth",
+	"resource": "map-api",
+	"credentials": {
+		"secret": "c1d81024-a0f9-49c6-a0a0-031819cd5a28"
+	},
+	"principal-attribute": "preferred_username",
+	"ssl-required": "external",
+	"enable-cors": true,
+	"cors-allowed-methods": "POST, PUT, DELETE, GET, OPTION, HEAD",
+	"bearer-only": true,
+	"enable-basic-auth": false,
+	"expose-token": true,
+	"public-client" :true,
+	"use-resource-role-mappings": false,
+	"policy-enforcer": {
+    "enforcement-mode": "DISABLED"
+  }
+} 

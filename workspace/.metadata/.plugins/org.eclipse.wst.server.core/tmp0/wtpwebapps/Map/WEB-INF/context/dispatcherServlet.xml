@@ -29,6 +29,10 @@
 	
 	
 	
+	
+	
+	
+	
 	<mvc:default-servlet-handler/>
 	
 	<mvc:resources mapping="/template/**" location="/template/" />

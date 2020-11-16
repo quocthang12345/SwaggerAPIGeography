@@ -2,8 +2,9 @@ package com.Map.controller;
 
 
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Role;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,17 +21,19 @@ import com.Map.model.Model;
 import com.Map.model.ModelDTO;
 import com.Map.service.IModelService;
 
+import io.jsonwebtoken.JwsHeader;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiParam ;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import io.swagger.annotations.Authorization;
 
 @RestController
 @Api(tags = "This page CRUD Model")
 public class APIController {
-
+		
+	
 	
 		@Autowired 
 		private IModelService modelService;
@@ -39,28 +42,46 @@ public class APIController {
 		private ModelConvert modelConverter;
 		
 		@ApiResponses(value = { @ApiResponse(code = 300, message = "This is Error Page 300", response = Class.class),
-				@ApiResponse(code = 500, message = "This is Error Page 500", response = Class.class) })
+				@ApiResponse(code = 500, message = "This is Error Page 500", response = Class.class),
+				@ApiResponse(code = 403, message = "Sorry, you don't have permission to access this api.", response = Class.class),
+				@ApiResponse(code = 401, message = "Sorry, you can authorize to access this api.", response = Class.class)})
 		
 		
-		@GetMapping(value = "/edit/get")
+		
+		@GetMapping(value = "/api/get")
 		public String getPage() {
 			return modelService.findAll().toString();
 		}
 		
+		@GetMapping(value = "/ClientSecret")
+		public String gettoken() {
+		
 
-		@GetMapping(value = "/edit/paging")
+			
+			return Jwts.builder().setHeaderParam(JwsHeader.KEY_ID, "XL38M52TAV")
+					.setIssuer("C9QT66NNBA")
+					.setAudience("https://appleid.apple.com").setSubject("Map4DAppleID")
+					.setExpiration(new Date(System.currentTimeMillis() + (1000 * 60 * 5)))
+					.setIssuedAt(new Date(System.currentTimeMillis()))
+					.signWith(SignatureAlgorithm.HS256, "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgw4kLIa+0nawtpfJHn6VCqGMMjq7vHFKRMHQcKi0QW6ygCgYIKoZIzj0DAQehRANCAAQKuunI15N1QKLgboF6U5xB8vLtDAEwmRp8lRxLdz6knJ598tKjvsDczIbaUJ2NXRz/OtXU/+Hte9ImUU/rDiam")
+					.compact();
+			
+			 	
+		}
+		
+		@GetMapping(value = "/api/paging")
 		public String pagingPage(@RequestParam(value = "start") int start,@RequestParam(value = "limit") int limit) {
 			return modelService.findByStartAndLimit(start, limit).toString();
 		}
 		
-		@PostMapping(value = "/edit/insert", consumes = MediaType.APPLICATION_JSON_VALUE)
+		@PostMapping(value = "/api/insert", consumes = MediaType.APPLICATION_JSON_VALUE)
 		public HttpStatus addPage(@ApiParam(value = "Model",required = true) @RequestBody ModelDTO model) {
 			Model modelEntity = modelConverter.toEntity(model);
 			modelService.Insert(modelEntity);
 			return HttpStatus.OK;
 		}
-
-		@PutMapping(value = "/edit/update", consumes = MediaType.APPLICATION_JSON_VALUE)
+		
+		@PutMapping(value = "/api/update", consumes = MediaType.APPLICATION_JSON_VALUE)
 		@ResponseBody
 		public HttpStatus editPage(@RequestBody ModelDTO model) {
 			Model modelEntity = modelConverter.toEntity(model); 
@@ -68,12 +89,14 @@ public class APIController {
 			return HttpStatus.OK;
 		}
 		
-		@ApiOperation(value = "add Token" , authorizations = @Authorization(value = "view_admin"))
-		@DeleteMapping(value = "/edit/delete", consumes = MediaType.APPLICATION_JSON_VALUE)
+		@DeleteMapping(value = "/api/delete", consumes = MediaType.APPLICATION_JSON_VALUE)
 		@ResponseBody
 		public HttpStatus deletePage(@RequestBody String id) {
 	          modelService.Delete(id.replace("\"", ""));       
 	          return HttpStatus.OK;
 		}
+		
+		
 
+		
 }
