@@ -214,3 +214,10 @@ Nov 12, 2020 15:33:24.765 [7041, Main Thread] ###!!! ABORT: file resource://gre/
 Nov 12, 2020 15:33:24.765 ExceptionHandler::GenerateDump cloned child 7391
 Nov 12, 2020 15:33:24.765 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
 Nov 12, 2020 15:33:24.766 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+Nov 17, 2020 14:16:46.217 NEW SESSION
+Nov 17, 2020 14:16:46.217 [5978, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Nov 17, 2020 14:16:46.218 [5978, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 553
+Nov 17, 2020 14:16:46.218 ExceptionHandler::GenerateDump cloned child 6219
+Nov 17, 2020 14:16:46.218 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Nov 17, 2020 14:16:46.218 ExceptionHandler::WaitForContinueSignal waiting for continue signal...
