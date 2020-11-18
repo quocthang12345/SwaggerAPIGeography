@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.bouncycastle.math.ec.rfc8032.Ed25519.Algorithm"/>
-    <fullyQualifiedTypeName name="io.jsonwebtoken.SignatureAlgorithm"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.utils.Base64"/>
-    <fullyQualifiedTypeName name="com.auth0.jwt.JWT"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.apache.commons.codec.binary.Hex"/>
     <fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Hex"/>
@@ -38,9 +32,6 @@
     <fullyQualifiedTypeName name="org.keycloak.crypto.SignatureSignerContext"/>
     <fullyQualifiedTypeName name="java.sql.Time"/>
     <fullyQualifiedTypeName name="org.keycloak.crypto.ServerECDSASignatureSignerContext"/>
-    <fullyQualifiedTypeName name="org.keycloak.jose.jws.JWSBuilder"/>
-    <fullyQualifiedTypeName name="org.keycloak.representations.JsonWebToken"/>
-    <fullyQualifiedTypeName name="org.keycloak.common.util.Time"/>
     <fullyQualifiedTypeName name="java.security.NoSuchAlgorithmException"/>
     <fullyQualifiedTypeName name="java.security.spec.InvalidKeySpecException"/>
     <fullyQualifiedTypeName name="javax.ws.rs.POST"/>
@@ -53,11 +44,20 @@
     <fullyQualifiedTypeName name="org.keycloak.models.IdentityProviderModel"/>
     <fullyQualifiedTypeName name="org.keycloak.broker.social.SocialIdentityProviderFactory"/>
     <fullyQualifiedTypeName name="org.keycloak.broker.provider.AbstractIdentityProviderFactory"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.keycloak.common.util.KeycloakUriBuilder"/>
     <fullyQualifiedTypeName name="org.keycloak.common.util.Base64Url"/>
     <fullyQualifiedTypeName name="java.nio.charset.StandardCharsets"/>
     <fullyQualifiedTypeName name="java.util.UUID"/>
     <fullyQualifiedTypeName name="java.security.MessageDigest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="org.keycloak.broker.oidc.KeycloakOIDCIdentityProvider"/>
+    <fullyQualifiedTypeName name="org.keycloak.KeycloakSecurityContext"/>
+    <fullyQualifiedTypeName name="org.keycloak.representations.AccessToken"/>
+    <fullyQualifiedTypeName name="org.keycloak.representations.JsonWebToken"/>
+    <fullyQualifiedTypeName name="org.keycloak.common.util.Time"/>
+    <fullyQualifiedTypeName name="org.keycloak.jose.jws.JWSBuilder"/>
+    <fullyQualifiedTypeName name="org.keycloak.broker.oidc.mappers.UsernameTemplateMapper"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="com.Map.config.AppleIdentityProvider"/>
 </qualifiedTypeNameHistroy>

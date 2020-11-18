@@ -8,6 +8,9 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value=" String token = Jwts.builder().setHeaderParam(JwsHeader.KEY_ID,"/>
+			<item value="String provider = &quot;apple&quot;;"/>
+			<item value="String provider = &quot;apple&quot;; String authServerRootUrl ="/>
 			<item value=" Object keycloakAttr ="/>
 			<item value="entrypoint"/>
 		</list>

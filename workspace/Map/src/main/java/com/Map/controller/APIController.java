@@ -3,15 +3,30 @@ package com.Map.controller;
 
 
 import java.nio.charset.StandardCharsets;
+import java.security.KeyFactory;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.util.Base64;
 import java.util.Date;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.keycloak.KeycloakSecurityContext;
+import org.keycloak.broker.oidc.KeycloakOIDCIdentityProvider;
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.common.util.KeycloakUriBuilder;
+import org.keycloak.common.util.Time;
+import org.keycloak.crypto.Algorithm;
+import org.keycloak.crypto.KeyWrapper;
+import org.keycloak.crypto.ServerECDSASignatureSignerContext;
+import org.keycloak.crypto.SignatureSignerContext;
+import org.keycloak.jose.jws.JWSBuilder;
+import org.keycloak.representations.AccessToken;
+import org.keycloak.representations.JsonWebToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -63,45 +78,78 @@ public class APIController {
 		
 		@GetMapping(value = "/SignInApple")
 		public String gettoken(HttpServletRequest httpServletRequest) {
-				String provider = "apple";
-		        String authServerRootUrl = "https://appleid.apple.com/auth/authorize";
-		        String realm = "Map";
-		        String clientId = "Map4DAppleID";
-		        String token = Jwts.builder().setHeaderParam(JwsHeader.KEY_ID, "XL38M52TAV")
-						.setIssuer("C9QT66NNBA")
-						.setAudience("https://appleid.apple.com").setSubject("Map4DAppleID")
-						.setExpiration(new Date(System.currentTimeMillis() + (1000 * 60 * 5)))
-						.setIssuedAt(new Date(System.currentTimeMillis()))
-						.signWith(SignatureAlgorithm.HS256, "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgw4kLIa+0nawtpfJHn6VCqGMMjq7vHFKRMHQcKi0QW6ygCgYIKoZIzj0DAQehRANCAAQKuunI15N1QKLgboF6U5xB8vLtDAEwmRp8lRxLdz6knJ598tKjvsDczIbaUJ2NXRz/OtXU/+Hte9ImUU/rDiam")
-						.compact();
-		        String nonce = UUID.randomUUID().toString();
-		        MessageDigest md = null;
+			
+			String provider = "apple";
+			String authServerRootUrl = "https://appleid.apple.com/auth/authorize";
+			String realm = "Map";
+			String clientId = "Map4DAppleID";
+			String token = Jwts.builder().setHeaderParam(JwsHeader.KEY_ID, "XL38M52TAV").setIssuer("C9QT66NNBA")
+					.setAudience("https://appleid.apple.com").setSubject("Map4DAppleID")
+					.setExpiration(new Date(System.currentTimeMillis() + (1000 * 60 * 5)))
+					.setIssuedAt(new Date(System.currentTimeMillis()))
+					.signWith(SignatureAlgorithm.HS256,
+							"MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgw4kLIa+0nawtpfJHn6VCqGMMjq7vHFKRMHQcKi0QW6ygCgYIKoZIzj0DAQehRANCAAQKuunI15N1QKLgboF6U5xB8vLtDAEwmRp8lRxLdz6knJ598tKjvsDczIbaUJ2NXRz/OtXU/+Hte9ImUU/rDiam")
+					.compact();
+			
+			
+			String nonce = UUID.randomUUID().toString();
+			MessageDigest md = null;
 
-		        try {
-		            md = MessageDigest.getInstance("SHA-256");
-		        } catch (NoSuchAlgorithmException e) {
-		            throw new RuntimeException(e);
-		        }
+			try {
+				md = MessageDigest.getInstance("SHA-256");
+			} catch (NoSuchAlgorithmException e) {
+				throw new RuntimeException(e);
+			}
 
-		        String input = provider + clientId + nonce;
-		        byte[] check = md.digest(input.getBytes(StandardCharsets.UTF_8));
-		        String hash = Base64Url.encode(check);
-		        httpServletRequest.getSession().setAttribute("hash", hash);
+			String input = provider + clientId + nonce;
+			byte[] check = md.digest(input.getBytes(StandardCharsets.UTF_8));
+			String hash = Base64Url.encode(check);
+			httpServletRequest.getSession().setAttribute("hash", hash);
 
-		        String redirectUri = "http://accounts-dev.map4d.vn/auth/realms/Map/broker/apple/endpoint"; 
+			String redirectUri = "http://accounts-dev.map4d.vn/auth/realms/Map/broker/apple/endpoint";
 
-		        return KeycloakUriBuilder.fromUri(authServerRootUrl)
-		        		.queryParam("response_mode", "form_post") 
-		                .queryParam("response_type", "code") 
-		                .queryParam("scope", "openid")
-		                .queryParam("kc_idp_hint", "apple")
-		                .queryParam("client_id", clientId)
-		                .queryParam("redirect_uri", redirectUri)
-		                .queryParam("nonce", nonce).build(realm, "apple").toString();
-
+			return KeycloakUriBuilder.fromUri(authServerRootUrl).queryParam("response_mode", "form_post")
+					.queryParam("response_type", "code").queryParam("scope", "openid")
+					.queryParam("kc_idp_hint", "apple").queryParam("client_id", clientId)
+					.queryParam("redirect_uri", redirectUri).queryParam("nonce", nonce).build(realm, "apple")
+					.toString();
+			 
 			
 			 	
 		}
+		
+		
+		@GetMapping(value = "/ClientSecret")
+		public String getClientSecret(HttpServletRequest httpServletRequest) throws InvalidKeySpecException, NoSuchAlgorithmException {
+			  KeyFactory keyFactory = KeyFactory.getInstance("EC");
+	            byte[] pkc8ePrivateKey = Base64.getDecoder().decode("MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgw4kLIa+0nawtpfJHn6VCqGMMjq7vHFKRMHQcKi0QW6ygCgYIKoZIzj0DAQehRANCAAQKuunI15N1QKLgboF6U5xB8vLtDAEwmRp8lRxLdz6knJ598tKjvsDczIbaUJ2NXRz/OtXU/+Hte9ImUU/rDiam");
+	            PKCS8EncodedKeySpec keySpecPKCS8 = new PKCS8EncodedKeySpec(pkc8ePrivateKey);
+	            PrivateKey privateKey = keyFactory.generatePrivate(keySpecPKCS8);
+
+	            KeyWrapper keyWrapper = new KeyWrapper();
+	            keyWrapper.setAlgorithm(Algorithm.ES256);
+	            keyWrapper.setKid("XL38M52TAV");
+	            keyWrapper.setPrivateKey(privateKey);
+	            SignatureSignerContext signer = new ServerECDSASignatureSignerContext(keyWrapper);
+
+	            long currentTime = Time.currentTime();
+	            JsonWebToken token = new JsonWebToken();
+	            token.issuer("C9QT66NNBA");
+	            token.issuedAt((int) currentTime);
+	            token.expiration((int) (currentTime + 15 * 60));
+	            token.audience("https://appleid.apple.com");
+	            token.subject("Map4DAppleID");
+	            String clientSecret = new JWSBuilder().jsonContent(token).sign(signer);
+			
+	            
+	            httpServletRequest.setAttribute("clientSecret", clientSecret);
+	            
+	            return clientSecret;
+			 	
+		}
+		
+		
+		
 		
 		@GetMapping(value = "/api/paging")
 		public String pagingPage(@RequestParam(value = "start") int start,@RequestParam(value = "limit") int limit) {
